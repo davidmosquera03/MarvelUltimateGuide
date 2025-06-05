@@ -1,0 +1,17 @@
+.series-cover {
+  max-width: 50vh;
+}
+
+.series-cover:hover {
+  transform: scale(1.02);
+}
+
+.series-cover:hover + p {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .series-cover {
+    max-width: 30vh;
+  }
+}

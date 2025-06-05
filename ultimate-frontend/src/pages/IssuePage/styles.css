@@ -1,0 +1,17 @@
+.text-box {
+  width: 80%; /* or any fixed size */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.issue-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .issue-layout {
+    flex-direction: column; /* Arranges items in a column on mobile */
+  }
+}

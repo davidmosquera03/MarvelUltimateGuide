@@ -1,0 +1,11 @@
+#Python
+__pycache__
+.pyc
+.pytest_cache
+
+# Environment variables
+.env
+Venv/
+
+#dependencies
+node_modules/

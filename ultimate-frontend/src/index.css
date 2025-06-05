@@ -1,0 +1,16 @@
+* {
+  font-family: "Inter";
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}

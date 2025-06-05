@@ -1,0 +1,25 @@
+.calendar-layout {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.button {
+  background: #2c2c2c;
+  color: #fee9e7;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #3a3a3a; /* Slightly lighter shade on hover */
+}
+
+@media (max-width: 768px) {
+  .calendar-layout {
+    justify-content: center;
+    margin: auto;
+  }
+}

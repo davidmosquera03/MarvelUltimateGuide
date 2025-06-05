@@ -1,0 +1,17 @@
+.navbar {
+  background: #c92427; /* red */
+  padding: 12px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.navbar a {
+  color: white; /* Default color */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}

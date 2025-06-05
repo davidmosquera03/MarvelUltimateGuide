@@ -1,0 +1,27 @@
+.cover {
+  max-width: 32vh;
+}
+
+.cover:hover {
+  transform: scale(1.02);
+}
+
+.cover:hover + p {
+  transform: scale(1.02);
+}
+
+.cover-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cover-grid {
+    flex-direction: column; /* Arranges items in a column on mobile */
+  }
+
+  .cover {
+    max-width: 25vh;
+  }
+}

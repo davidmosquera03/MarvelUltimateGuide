@@ -1,0 +1,20 @@
+.series-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.set-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .series-layout {
+    flex-direction: column; /* Arranges items in a column on mobile */
+  }
+  .set-layout {
+    flex-direction: column; /* Arranges items in a column on mobile */
+  }
+}

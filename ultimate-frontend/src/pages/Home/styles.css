@@ -1,0 +1,29 @@
+.home-layout {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  margin-left: 6.8rem;
+  margin-top: 3rem;
+}
+
+.series-list {
+  margin-left: 8rem;
+}
+
+.home-responsive {
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .home-layout {
+    justify-content: center;
+    margin: auto;
+  }
+
+  .series-list {
+    margin: auto;
+  }
+  .home-responsive {
+    flex-direction: column; /* Arranges items in a column on mobile */
+  }
+}
