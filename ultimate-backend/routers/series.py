@@ -3,6 +3,7 @@ from database import ultimate_db
 from models.issue import SeriesPageIssue
 from models.week import WeekItem
 from models.series import SeriesModel
+from models.issue import IssueModel
 from typing import Optional,List
 from datetime import datetime
 import asyncio
@@ -25,6 +26,13 @@ async def get_series_title(series_id:str):
     one_doc = await collection.find_one({"_id":series_id})
     one_doc = SeriesModel(**one_doc)
     return {"title":one_doc.title}
+
+@router.get("/length/{series_id}",tags=["Series"])
+async def get_series_length(series_id:str):
+    collection = ultimate_db["issues"]
+    documents = await collection.find({"series_id":series_id}).sort("issue_number",1).to_list(length=None)
+    documents = [IssueModel(**doc) for doc in documents]
+    return {len(documents)}
 
 @router.get("/{series_id}",tags=["Series"])
 async def get_series(series_id:str):

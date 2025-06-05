@@ -18,7 +18,7 @@ function SmallCard({ issue, topText }: smallCardProps) {
             className="cover"
             style={{ maxWidth: "20vh" }}
             src={issue.cover}
-            alt="No Issue available"
+            alt={issue.title}
           />
           <p>
             <strong>{extractIssueNumber(issue.title)}:</strong>{" "}

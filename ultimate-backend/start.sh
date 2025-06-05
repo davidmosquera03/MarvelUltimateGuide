@@ -7,4 +7,5 @@
 source Venv/Scripts/activate # Assuming 'venv' is the name of your virtual environment
 
 # Run your Python application with reload
+
 python -m uvicorn app:app --reload

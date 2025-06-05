@@ -1,6 +1,7 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from database import ultimate_db
 from models.issue import IssueModel,CreatorItem
+from models.week import WeekItem
 from typing import Optional,List
 from datetime import datetime
 router = APIRouter()
@@ -18,6 +19,31 @@ async def get_issues_from_series(series_id:str):
     if not documents:
         raise HTTPException(status_code=404, detail=f"No issues found for series ID '{series_id}'")
     return {"issues":documents}
+
+@router.get("/overview/{series_id}/", tags=["Issues"])
+async def get_issues_overview(
+    series_id: str,
+    page: int = Query(1, ge=1, description="Page number for pagination (starts at 1)"),
+    page_size: int = Query(10, ge=1, le=100, description="Number of items per page (max 100)")
+):
+    """
+    Returns minimal issue info from series with pagination.
+    """
+    skip_count = (page - 1) * page_size
+    
+    collection = ultimate_db[f"issues"]
+    documents = await collection.find({"series_id": series_id}) \
+                               .sort("issue_number", 1) \
+                               .skip(skip_count) \
+                               .limit(page_size) \
+                               .to_list(length=None) 
+                               
+    documents = [WeekItem(**doc) for doc in documents]
+
+    if not documents:
+        raise HTTPException(status_code=404, detail=f"No issues found for series ID '{series_id}' on page {page}")
+    
+    return {"issues": documents}
 
 @router.get("/by-id/{issue_id}",tags=["Issues"])
 async def get_issue(issue_id:str):

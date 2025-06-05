@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Series, SeriesPageIssues } from "../../types/models";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getSeries } from "../../api/series";
 import { getSeriesPageIssues } from "../../api/series";
 import { formatDescription } from "../../utils/formatters";
@@ -49,6 +49,13 @@ function SeriesPage() {
           <p className="text-box">
             {formatDescription(seriesIssues.first_issue.description)}
           </p>
+          <Link
+            className="link"
+            style={{ fontWeight: "bold" }}
+            to={`/issues-portal/${series._id}`}
+          >
+            See All Issues
+          </Link>
         </div>
       </div>
       <div className="set-layout">

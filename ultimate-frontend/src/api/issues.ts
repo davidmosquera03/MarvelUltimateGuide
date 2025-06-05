@@ -13,3 +13,8 @@ export const getIssuebyId = (issue_id: string) => issuesApi.get(`/by-id/${issue_
 export const getNextIssue = (series_id:string) => issuesApi.get(`next-issue/${series_id}`);
 
 export const getFurthestIssue = (series_id:string) => issuesApi.get(`furthest-issue/${series_id}`);
+
+export const getOverview = (series_id: string, page: number = 1, pageSize: number = 10) => 
+  issuesApi.get(`overview/${series_id}`, { params: { page, page_size: pageSize } });
+
+

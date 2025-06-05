@@ -13,3 +13,5 @@ export const getSeries = (series_id:string) => seriesApi.get(`/${series_id}`);
 export const getSeriesPageIssues = (series_id:string) => seriesApi.get(`/get-issues/${series_id}`);
 
 export const getAllSeries = () => seriesApi.get("/");
+
+export const getSeriesLength = (series_id:string) => seriesApi.get(`/length/${series_id}`)
