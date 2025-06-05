@@ -23,11 +23,7 @@ function WeekCard({ week, topText }: WeekCardProps) {
           ))
         ) : (
           <div className="cover-item">
-            <img
-              className="cover"
-              src={empty_cover}
-              alt="No releases This week"
-            />
+            <img className="cover" src={empty_cover} alt="No cover available" />
             <p style={{ textAlign: "center" }}>No releases this week</p>
           </div>
         )}

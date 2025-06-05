@@ -10,7 +10,7 @@ function LogoCard({ logo, title, id }: LogoCardProps) {
   return (
     <div style={{ textAlign: "center" }}>
       <Link className="link" to={`/series/${id}`}>
-        <img className="logo-img" src={logo} />
+        <img className="logo-img" src={logo} alt={title} />
         <p>{title}</p>
       </Link>
     </div>

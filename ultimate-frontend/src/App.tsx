@@ -5,8 +5,9 @@ import "./index.css";
 import Calendar from "./pages/Calendar";
 import SeriesPortal from "./pages/SeriesPortal";
 import SeriesPage from "./pages/SeriesPage";
-import IssuePage from "./pages/IssuePage";
 import IssuesPortal from "./pages/IssuesPortal";
+import IssueLayout from "./pages/IssueLayout";
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +18,7 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/series/:series_id" element={<SeriesPage />} />
         <Route path="/series-portal" element={<SeriesPortal />} />
-        <Route path="/issue/:issue_id" element={<IssuePage />} />
+        <Route path="/issue/:issue_id" element={<IssueLayout />} />
         <Route path="/issues-portal/:series_id" element={<IssuesPortal />} />
       </Routes>
       <p style={{ textAlign: "center" }}>

@@ -21,19 +21,19 @@ export const EMPTY_WEEK_RELEASES: WeekReleases = [
 
 export const EMPTY_ISSUE: Issue = {
     _id: "None",
-    title: "Ultimate Title (2024) #0",
+    title: "404: Issue Not Found",
     issue_number: 0,
     series_id: "None",
     release_date: "2025-07-16",
     cover:
       empty_cover,
-    description: "no description available",
+    description: "NO Issue Found",
     creators: [],
   };
 
 export const EMPTY_SERIES = {
     _id: "",
-    title: "Ultimate Series (2024)",
+    title: "404 Series Not Found",
     logo: "",
     banner: undefined,
   };
