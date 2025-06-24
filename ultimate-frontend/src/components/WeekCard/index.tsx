@@ -18,7 +18,7 @@ function WeekCard({ week, topText }: WeekCardProps) {
           week.data.map((issue, index) => (
             <Link to={`/issue/${issue.issue_id}`} className="link" key={index}>
               <img className="cover" src={issue.cover} alt={issue.title} />
-              <p>{issue.title}</p>
+              <p style={{ width: "15rem" }}>{issue.title}</p>
             </Link>
           ))
         ) : (
