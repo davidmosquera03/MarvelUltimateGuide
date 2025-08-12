@@ -1,5 +1,7 @@
 # UltimateGuide
 
+Data provided by Marvel. Powered by Marvel API.
+
 A page to visualize future and past comic releases of the New Ultimate Universe Imprint
 
 ## Table of Contents
