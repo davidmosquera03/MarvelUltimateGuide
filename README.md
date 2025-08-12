@@ -30,6 +30,12 @@ Clone the repo and set up both frontend and backend.
 
 ### MongoDB (Local)
 
+You must have a database named "Ultimate" with collections:
+
+- issues
+- series
+- weeks
+
 on cmd
 
 ```
@@ -72,3 +78,17 @@ On /docs you may see the Fastapi documentation
 ## Acknowledgements
 
 - Comic data powered by the [Marvel API](https://developer.marvel.com/)
+
+## Screenshots
+
+### Home
+
+![Alt text](img/screenshot_home.png)
+
+### Calendar
+
+![Alt text](img/screenshot_calendar.png)
+
+### Issue
+
+![Alt text](img/screenshot_issue.png)
